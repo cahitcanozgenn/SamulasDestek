@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Destek Admin | </title>
+	<!-- Tell the browser to be responsive to screen width -->
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<!-- Bootstrap 3.3.7 -->
+	<link rel="stylesheet" href="https://giris.omu.edu.tr/AdminLTE-2.4.13/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://giris.omu.edu.tr/AdminLTE-2.4.13/bower_components/font-awesome/css/font-awesome.min.css">
+	<!-- Ionicons -->
+	<link rel="stylesheet" href="https://giris.omu.edu.tr/AdminLTE-2.4.13/bower_components/Ionicons/css/ionicons.min.css">
+	<!-- daterange picker -->
+	<link rel="stylesheet" href="https://giris.omu.edu.tr/AdminLTE-2.4.13/bower_components/bootstrap-daterangepicker/daterangepicker.css">
+	<!-- bootstrap datepicker -->
+	<link rel="stylesheet" href="https://giris.omu.edu.tr/AdminLTE-2.4.13/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+	<!-- DataTables -->
+	<link rel="stylesheet" href="https://giris.omu.edu.tr/AdminLTE-2.4.13/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+	<!-- Theme style -->
+	<link rel="stylesheet" href="https://giris.omu.edu.tr/AdminLTE-2.4.13/dist/css/AdminLTE.min.css">
+	<!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+	<link rel="stylesheet" href="https://giris.omu.edu.tr/AdminLTE-2.4.13/dist/css/skins/_all-skins.min.css">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- Google Font -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+	<!-- jQuery 3 -->
+	<script src="https://giris.omu.edu.tr/AdminLTE-2.4.13/bower_components/jquery/dist/jquery.min.js"></script>
+	<!-- Bootstrap 3.3.7 -->
+	<script src="https://giris.omu.edu.tr/AdminLTE-2.4.13/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<!-- DataTables -->
+	<script src="https://giris.omu.edu.tr/AdminLTE-2.4.13/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+	<script src="https://giris.omu.edu.tr/AdminLTE-2.4.13/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+	<!-- InputMask -->
+	<script src="https://giris.omu.edu.tr/AdminLTE-2.4.13/plugins/input-mask/jquery.inputmask.js"></script>
+	<script src="https://giris.omu.edu.tr/AdminLTE-2.4.13/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+	<script src="https://giris.omu.edu.tr/AdminLTE-2.4.13/plugins/input-mask/jquery.inputmask.extensions.js"></script>
+	<!-- date-range-picker -->
+	<script src="https://giris.omu.edu.tr/AdminLTE-2.4.13/bower_components/moment/min/moment.min.js"></script>
+	<script src="https://giris.omu.edu.tr/AdminLTE-2.4.13/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+	<!-- AdminLTE App -->
+	<script src="https://giris.omu.edu.tr/AdminLTE-2.4.13/dist/js/adminlte.min.js"></script>
+</head>
+<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+<body class="hold-transition skin-blue layout-top-nav">
+<div class="wrapper">
+	<header class="main-header">
+		<nav class="navbar navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="/" class="navbar-brand"><b>Destek</b>OMÜ</a>
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+						<i class="fa fa-bars"></i>
+					</button>
+				</div>
+ 
+				<!--div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Yönetim <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="/liste/1">Talepler</a></li>
+								<li><a href="/liste/2">İptaller</a></li>
+								<li class="divider"></li>
+								<li><a href="/arsiv/1">Talep Arşivi</a></li>
+								<li><a href="/arsiv/2">İptal Arşivi</a></li>
+								<li class="divider"></li>
+								<li><a href="/ayarlar">Ayarlar</a></li>
+							</ul>
+						</li>
+						
+					</ul>
+				</div-->
+	
+				<!-- Navbar Right Menu -->
+				<div class="navbar-custom-menu">
+					<ul class="nav navbar-nav">
+		
+						<!-- User Account Menu -->
+						<li class="dropdown user user-menu">
+							<!-- Menu Toggle Button -->
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									<img src="data:image/jpeg;base64,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" class="user-image" alt="Cahi̇t Can ÖZGEN">
+									<!-- hidden-xs hides the username on small devices so only the image appears. -->
+								<span class="hidden-xs">20480108 Cahi̇t Can ÖZGEN</span>
+							</a>
+							<ul class="dropdown-menu">
+								<!-- The user image in the menu -->
+								<li class="user-header">
+										<img src="data:image/jpeg;base64,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" class="img-circle" alt="User Image">
+										<p>
+										20480108 Cahi̇t Can ÖZGEN
+										<small>Samsun Meslek Yüksekokulu</small>
+									</p>
+								</li>
+							
+								<!-- Menu Footer-->
+								<li class="user-footer">
+									<!--div class="pull-left">
+										<a href="/yonetim" class="btn btn-info btn-flat"><i class="fa fa-gears"></i> Yönetim</a>
+									</div-->
+									<div class="pull-right">
+										<a href="/saml2/logout" class="btn btn-danger btn-flat"><i class="fa fa-sign-out"></i> Çıkış</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-custom-menu -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+  </header> 	<!-- Full Width Column -->
+	<div class="content-wrapper">
+		<div class="container">
+			<!-- Content Header (Page header) -->
+			<section class="content-header">
+				<h1>
+					
+					<small></small>
+				</h1>
+				<ol class="breadcrumb">
+					<li><a href="/"><i class="fa fa-home"></i> Anasayfa</a></li>
+					
+					<li  class="active" ><a href="/"></a></li>
+				</ol>
+			</section>
+			
+			
+				
+			
+			
+<!-- editor.md css -->
+    <link rel="stylesheet" href="/vendor/editor.md/css/editormd.preview.min.css" />
+    <link rel="stylesheet" href="/vendor/editor.md/css/editormd.min.css" />
+    <style type="text/css">
+    .editormd-fullscreen {
+        z-index: 2147483647;
+    }
+    </style>
+<!-- editor.md js -->
+    <script type="text/javascript">
+        window.jQuery || document.write(unescape("%3Cscript%20type%3D%22text/javascript%22%20src%3D%22//cdn.bootcss.com/jquery/2.2.4/jquery.min.js%22%3E%3C/script%3E"));
+    </script>
+    <script src="/vendor/editor.md/lib/marked.min.js"></script>
+    <script src="/vendor/editor.md/lib/prettify.min.js"></script>
+    <script src="/vendor/editor.md/lib/raphael.min.js"></script>
+    <script src="/vendor/editor.md/lib/underscore.min.js"></script>
+    <script src="/vendor/editor.md/lib/sequence-diagram.min.js"></script>
+    <script src="/vendor/editor.md/lib/flowchart.min.js"></script>
+    <script src="/vendor/editor.md/lib/jquery.flowchart.min.js"></script>
+    <script src="/vendor/editor.md/js/editormd.min.js"></script>
+    <script src="/vendor/editor.md/languages/en.js"></script>
+
+<section class="content">
+
+	<div class="row">
+
+		<div class="col-md-12">
+			<div class="box box-warning">
+				<form class="form-horizontal" action="/admin/form/update" method="POST">
+				<input type="hidden" name="_token" value="6DD27ZWJeGO8P7wGdMQxtOGN8Mcl9uJ93U2bgQB0">					<div class="box-header">
+						<h3 class="box-title">Makale Giriş Formu</h3>
+						<div class="pull-right box-tools">
+							<a href="/admin" class="btn btn-success" style="margin-right: 10px;">
+								<i class="fa fa-angle-left"></i> Geri
+							</a>
+							<a href="//" target="_blank" class="btn btn-warning" style="margin-right: 10px;">
+								<i class="fa fa-external-link"></i> Ön İzleme
+							</a>
+							<button type="submit" class="btn btn-info pull-right"><i class="fa fa-save"></i> Kaydet</button>
+						</div>
+					</div>
+					<!-- /.box-header -->
+				
+					<div class="box-body">
+						<div class="form-group">
+							<label for="constant_id" class="col-sm-2 control-label">Kategori: </label>
+							<div class="col-sm-10">
+								<select class="form-control" name="constant_id">
+									<option value="1" >Teknik Destek</option>
+									<option value="2" >E-posta</option>
+									<option value="3" >Yazılım</option>
+									<option value="4" >Servisler</option>
+									<option value="5" >Web Sayfaları ve Yönetimi</option>
+								   
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="title" class="col-sm-2 control-label">Başlık: </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="title" value="">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="ozet" class="col-sm-2 control-label">Özet: </label>
+							<div class="col-sm-10">
+								<textarea class="form-control" class="form-control" name="ozet" rows="2"></textarea>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="anahtar_kelimeler" class="col-sm-2 control-label">Anahtar Kelimeler: </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="anahtar_kelimeler" value="">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="aciklama" class="col-sm-2 control-label">Açıklama: </label>
+							<div class="col-sm-10">
+								<div id="editormd">
+									<!-- You must hide it with `display:none;` -->
+									<textarea class="form-control" class="form-control" name="aciklama"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="box-footer clearfix">
+						
+						<button type="submit" class="btn btn-info pull-right"><i class="fa fa-save"></i> Kaydet</button>
+						<a href="//" target="_blank" class="btn btn-warning pull-right" style="margin-right: 10px;">
+							<i class="fa fa-external-link"></i> Ön İzleme
+						</a>
+					</div>
+					<input type="hidden" name="id" value="0">
+				</form>
+			</div>
+				  <!-- /.box -->
+		</div>	  
+		
+	</div>
+
+</section>
+
+<script type="text/javascript">
+    var _editormd;
+    $(function() {
+        //emoji
+        editormd.emoji = {
+            path : "",
+            ex : ".png"
+        };
+        _editormd = editormd({
+                id : "editormd",
+                width : "100%",
+                height : "640",
+                saveHTMLToTextarea : true,
+                emoji : true,
+                taskList : true,
+                tex : false,
+                toc : true,
+                tocm : false,
+                codeFold : true,
+                flowChart: false,
+                sequenceDiagram: false,
+                path : "/vendor/editor.md/lib/",
+                imageUpload : true,
+                imageFormats : ["jpg", "gif", "png"],
+				imageUploadURL : "/xetaravel-editor-md/upload/picture?_token=6DD27ZWJeGO8P7wGdMQxtOGN8Mcl9uJ93U2bgQB0&from=/xetaravel-editor-md/upload/picture",
+				htmlDecode: true, 
+        });
+    });
+</script>
+
+		  <!-- /.content -->
+		</div>
+		<!-- /.container -->
+	</div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="pull-right hidden-xs">
+        <b>Sürüm</b> 1.0.1
+      </div>
+      <strong>Copyright &copy; 2022 <a href="http://www.omu.edu.tr">OMÜ</a> | <a href="https://bidb.omu.edu.tr">bidb</a></strong>
+    </div>
+    <!-- /.container -->
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+</body>
+<!-- page script -->
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+						
+						
+						
+					
