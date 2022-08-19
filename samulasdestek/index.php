@@ -9,7 +9,7 @@ try
       $passwd = "root";
       $db = new PDO($dsn, $user, $passwd);
       $db-> setAttribute (PDO :: ATTR_ERRMODE, PDO :: ERRMODE_WARNING);
-      $db = $db->query("SELECT*FROM content");
+      $db = $db->query("SELECT*FROM icerik");
       $oku = $db->fetchAll(PDO::FETCH_ASSOC); //verilerin hepsi
   ?>
          <div class="container">
@@ -26,8 +26,8 @@ try
                       <tr>
                         <td>
                            <form action='content.php' method='POST'>
-                                <input type='hidden' name='content' value='$contentId'>
-                                <input class='btn btn-outline-danger' type='submit' value='$contentHeader'>
+                                <input type='hidden' name='content' value='$icerikId'>
+                                <input class='btn btn-outline-danger' type='submit' value='$icerikBaslik'>
                             </form>
                         </td>
                       </tr>

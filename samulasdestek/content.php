@@ -12,9 +12,9 @@ try {
 
   if(isset($_POST['content']))
   {
-    $contentId=$_POST['content'];
+    $icerikId=$_POST['content'];
   }
-    $db = $db->query("SELECT * FROM content WHERE contentId=$contentId");
+    $db = $db->query("SELECT * FROM icerik WHERE icerikId=$icerikId");
  
    
    
@@ -35,8 +35,8 @@ try {
   extract($row);
   echo "
 
- <h2 class='text-center'>$contentHeader</h2>
- $contentText
+ <h2 class='text-center'>$icerikBaslik</h2>
+ $icerikYazi
  </div>
 
 

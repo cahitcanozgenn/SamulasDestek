@@ -9,7 +9,7 @@ try {
   $passwd = "root";
   $db = new PDO($dsn, $user, $passwd);
   $db-> setAttribute (PDO :: ATTR_ERRMODE, PDO :: ERRMODE_WARNING);
-  $db = $db->query("SELECT * FROM category");
+  $db = $db->query("SELECT * FROM kategori");
   $oku = $db->fetchAll(PDO::FETCH_ASSOC); //verilerin hepsi
 
   ?>
@@ -27,7 +27,7 @@ try {
   extract($row);
   echo "
   <tr>
-  <td>$categoryName</td>
+  <td>$kategoriAdi</td>
   </tr>
   ";
   }
