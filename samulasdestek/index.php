@@ -1,6 +1,6 @@
 <?php 
 require "header.php";
-require "/UwAmp/www/samulasdestekadmin/connection.php";
+require "connection.php";
 
 try 
 {
