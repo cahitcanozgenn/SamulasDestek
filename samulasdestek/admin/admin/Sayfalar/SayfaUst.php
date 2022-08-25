@@ -31,7 +31,7 @@ require_once '../../system/ayar.php'; ?>
   <!-- Daterange picker -->
   <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
 
-  <link rel="shortcut icon" href="http://mucahittopal.com/logo/tb.gif">
+  <link rel="shortcut icon" href="/samulasdestek/admin/admin/Sayfalar/dist/img/samulaslogo2.png">
   <link rel="stylesheet" href="plugins/bootstrap-dialog.min.css">
 <style>
         td {white-space: nowrap; }

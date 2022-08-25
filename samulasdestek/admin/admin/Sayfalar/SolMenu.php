@@ -1,16 +1,9 @@
-  <!-- Left side column. contains the logo and sidebar -->
-  <aside class="main-sidebar">
-    <!-- sidebar: style can be found in sidebar.less -->
+<aside class="main-sidebar">
     <section class="sidebar">
-      <!-- Sidebar user panel -->
-      
-      <!-- /.search form -->
-      <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header">Menüler</li>
         <li><a href="Home.php"><i class="fa fa-home"></i> <span>Anasayfa</span></a></li>
-       
-
+        
         <li class="treeview">
           <a href="#">
             <i class="fa  fa-share-alt"></i>
@@ -51,8 +44,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-plus"></i> Ekle</a></li>
-            <li><a href="#"><i class="fa fa-reorder"></i> Liste</a></li>
+            <li><a href="ResimEkle.php"><i class="fa fa-plus"></i> Ekle</a></li>
+            <li><a href="ResimListe.php"><i class="fa fa-reorder"></i> Liste</a></li>
 			<li class="">
                   <a href="#"><i class="fa fa-th-large"></i> Kategoriler
                     <span class="pull-right-container">
@@ -60,8 +53,8 @@
                     </span>
                   </a>
                   <ul class="treeview-menu" style="display: none;">
-                    <li><a href="#"><i class="fa fa-plus"></i> Ekle</a></li>
-                    <li><a href="#"><i class="fa fa-reorder"></i> Liste</a></li>
+                    <li><a href="ResimKatEkle.php"><i class="fa fa-plus"></i> Ekle</a></li>
+                    <li><a href="ResimKatListe.php"><i class="fa fa-reorder"></i> Liste</a></li>
                   </ul>
             </li>
           </ul>
@@ -79,8 +72,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-plus"></i> Ekle</a></li>
-            <li><a href="#"><i class="fa fa-reorder"></i> Liste</a></li>
+            <li><a href="VideoEkle.php"><i class="fa fa-plus"></i> Ekle</a></li>
+            <li><a href="VideoListe.php"><i class="fa fa-reorder"></i> Liste</a></li>
 			
           </ul>
         </li>

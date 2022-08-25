@@ -7,17 +7,59 @@
                         <div class="col-md-5 offset-md-1 padding_bottom1">
                            <h3>Hızlı Bağlantılar</h3>
                            <ul class="cont">
-                              <li>Bulut</li>
-                              <li>VPN</li>
-                              <li>ERP</li>
+
+                           <?php
+                     try {
+  $dsn = "mysql:host=localhost;dbname=samulasdestek;charset=utf8mb4";
+  $user = "root";
+  $passwd = "root";
+  $db = new PDO($dsn, $user, $passwd);
+  $db-> setAttribute (PDO :: ATTR_ERRMODE, PDO :: ERRMODE_WARNING);
+  $db = $db->query("SELECT * FROM hizlibaglanti");
+  $oku = $db->fetchAll(PDO::FETCH_ASSOC); //verilerin hepsi
+
+  ?>
+  <?php
+  foreach ($oku as $row) {
+  extract($row);
+  echo "
+  <li><a href='$url'>$adi</a></li>
+  ";
+  }
+          
+  } catch ( PDOException $e ){
+     echo "Bir Hata Oluştu: ".$e->getMessage();
+ }
+ ?>
                            </ul>
                         </div>
+                        
                         <div class="col-md-5 offset-md-1">
                            <h3>Yardım</h3>
                            <ul class="cont">
-                              <li>Bulut</li>
-                              <li>VPN</li>
-                              <li>ERP</li>
+                           <?php
+                     try {
+  $dsn = "mysql:host=localhost;dbname=samulasdestek;charset=utf8mb4";
+  $user = "root";
+  $passwd = "root";
+  $db = new PDO($dsn, $user, $passwd);
+  $db-> setAttribute (PDO :: ATTR_ERRMODE, PDO :: ERRMODE_WARNING);
+  $db = $db->query("SELECT * FROM yardim");
+  $oku = $db->fetchAll(PDO::FETCH_ASSOC); //verilerin hepsi
+
+  ?>
+  <?php
+  foreach ($oku as $row) {
+  extract($row);
+  echo "
+  <li><a href='$url'>$adi</a></li>
+  ";
+  }
+          
+  } catch ( PDOException $e ){
+     echo "Bir Hata Oluştu: ".$e->getMessage();
+ }
+ ?>
                            </ul>
                         </div>
                      </div>
@@ -28,7 +70,30 @@
                <div class="container">
                   <div class="row">
                      <div class="col-md-12">
-                        <p>© 2022 Tüm hakları saklıdır. <a href="#">SAMULAŞ A.Ş.</a></p>
+                        <?php
+                     try {
+  $dsn = "mysql:host=localhost;dbname=samulasdestek;charset=utf8mb4";
+  $user = "root";
+  $passwd = "root";
+  $db = new PDO($dsn, $user, $passwd);
+  $db-> setAttribute (PDO :: ATTR_ERRMODE, PDO :: ERRMODE_WARNING);
+  $db = $db->query("SELECT * FROM firmabilgileri");
+  $oku = $db->fetchAll(PDO::FETCH_ASSOC); //verilerin hepsi
+
+  ?>
+  <?php
+  foreach ($oku as $row) {
+  extract($row);
+  echo "
+  <p>$Footer1</p>
+  ";
+  }
+          
+  } catch ( PDOException $e ){
+     echo "Bir Hata Oluştu: ".$e->getMessage();
+ }
+ ?>
+                        
                      </div>
                   </div>
                </div>

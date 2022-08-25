@@ -33,7 +33,7 @@ if(OturumAktif()==true)
                             <input type="text" name="Footer1"
                                    class="form-control input-sm "
                                    value="<?= $Footer1 ?>"
-                                   placeholder="Copyright © 2017 Mücahit TOPAL XtbAdminV2 | Topal Bilişim.">
+                                   placeholder="Copyright © 2022 | Samulaş A.Ş. | Tüm Hakları Saklıdır.">
                         </div>
                     </div>
 				</div>

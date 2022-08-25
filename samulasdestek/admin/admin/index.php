@@ -56,7 +56,7 @@ if ($_SESSION && $_SESSION["Oturum"] != False) {
                         $_SESSION["Soyadi"] = $Soyadi;
                         $_SESSION["Yetki"] = $Yetki;
                         if ($Yetki == "Admin") {
-							$bilgi = 'Giriş Başarılı. Birazdan Ana Sayfaya yönlendirileceksiniz.';
+							$bilgi = 'Giriş Başarılı. Lütfen Bekleyin.';
 							$deger = 'success';
 						
                         } else {
@@ -112,7 +112,7 @@ if ($_SESSION && $_SESSION["Oturum"] != False) {
                     <div class="row mb15 table-layout">
 
                         <div class="col-xs-6 va-m pln">
-                                 <img src="/xtbadmin2/xtbadmin/Sayfalar/dist/img/SamulasLogo.png" title="SAMULAŞ" class="img-responsive w250">
+                                 <img src="/samulasdestek/admin/admin/Sayfalar/dist/img/SamulasLogo.png" title="SAMULAŞ" class="img-responsive w250">
                          </div>
                     </div>
                     <div class="panel panel-info mt10 br-n">
