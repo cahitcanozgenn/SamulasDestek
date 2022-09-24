@@ -1,100 +1,113 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <title>SAMULAŞ DESTEK</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="stylesheet" href="./css/bootstrap.min.css">
+      <link rel="stylesheet" href="./css/style.css">
+      <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/responsive.css">
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   </head>
+   <body class="main-layout">
+      <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+      </div>
+      <header>
+         <div class="header">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo">
+                              <a href="index.php"><img src="images/SamulasLogo.png" height="210" width="210" alt="#" /></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <div class="header_information">
+                        <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                           <span class="navbar-toggler-icon"></span>
+                           </button>
+                           <div class="collapse navbar-collapse" id="navbarsExample04">
+                              <ul class="navbar-nav mr-auto">
+                                 <li class="nav-item active">
+                                    <a class="nav-link" href="#">ANASAYFA</a>
+                                 </li> 
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="#">BİLGİ BANKASI</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="category.php">KATEGORİLER</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="#">İLETİŞİM</a>
+                                 </li>
+                              </ul>
+                              <div class="sign_btn"><a href="#">DESTEK</a></div>
+                           </div>
+                        </nav>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <footer>
+         <div class="footer">
+            <div class="container">
+               <div class="row border-top">
+                  <div class="col-md-10">
+                     <div class="row">
+                        <div class="col-md-5 offset-md-1 padding_bottom1">
+                           <h3>Hızlı Bağlantılar</h3>
+                           <ul class="cont">
 
-	<style type="text/css">
 
-	::selection { background-color: #E13300; color: white; }
-	::-moz-selection { background-color: #E13300; color: white; }
 
-	body {
-		background-color: #fff;
-		margin: 40px;
-		font: 13px/20px normal Helvetica, Arial, sans-serif;
-		color: #4F5155;
-	}
+                 </ul>
+                        </div>
+                        
+                        <div class="col-md-5 offset-md-1">
+                           <h3>Yardım</h3>
+                           <ul class="cont">
 
-	a {
-		color: #003399;
-		background-color: transparent;
-		font-weight: normal;
-		text-decoration: none;
-	}
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
 
-	a:hover {
-		color: #97310e;
-	}
-
-	h1 {
-		color: #444;
-		background-color: transparent;
-		border-bottom: 1px solid #D0D0D0;
-		font-size: 19px;
-		font-weight: normal;
-		margin: 0 0 14px 0;
-		padding: 14px 15px 10px 15px;
-	}
-
-	code {
-		font-family: Consolas, Monaco, Courier New, Courier, monospace;
-		font-size: 12px;
-		background-color: #f9f9f9;
-		border: 1px solid #D0D0D0;
-		color: #002166;
-		display: block;
-		margin: 14px 0 14px 0;
-		padding: 12px 10px 12px 10px;
-	}
-
-	#body {
-		margin: 0 15px 0 15px;
-		min-height: 96px;
-	}
-
-	p {
-		margin: 0 0 10px;
-		padding:0;
-	}
-
-	p.footer {
-		text-align: right;
-		font-size: 11px;
-		border-top: 1px solid #D0D0D0;
-		line-height: 32px;
-		padding: 0 10px 0 10px;
-		margin: 20px 0 0 0;
-	}
-
-	#container {
-		margin: 10px;
-		border: 1px solid #D0D0D0;
-		box-shadow: 0 0 8px #D0D0D0;
-	}
-	</style>
-</head>
-<body>
-
-<div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
-
-	<div id="body">
-		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
-
-		<p>If you would like to edit this page you'll find it located at:</p>
-		<code>application/views/welcome_message.php</code>
-
-		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/Welcome.php</code>
-
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="userguide3/">User Guide</a>.</p>
-	</div>
-
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
-</div>
-
-</body>
+                        
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   </body>
 </html>
+

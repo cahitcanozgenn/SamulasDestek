@@ -1,7 +1,5 @@
 <?php
-/**
- *
- */
+
 class Client_model extends CI_Model
 {
 
@@ -43,7 +41,6 @@ class Client_model extends CI_Model
     $this->db->join('category as ctg', 'ctg.categoryId = content.contentCategory', 'INNER');
     return $this->db->get()->result();
   }
-
 
 }
  ?>

@@ -1,7 +1,7 @@
 <section class="content">
 	<div class="row">
 		<div class="col-md-12">
-			<div class="box box-warning">
+			<div class="box box-danger">
 				<form class="form-horizontal" action="" method="POST">
 					<div class="box-header">
 						<h3 class="box-title">Kategori Güncelleme Formu</h3>
@@ -35,17 +35,25 @@
 								</select>
 							</div>
 						</div>
+						<div class="pull-left box-tools">
+					          <a href="<?=base_url("admin/Content/idContent/").md5($category->categoryId)?>" class="btn btn-success">
+							     <i class="fa fa-book"></i> Makaleleri Gör
+						      </a>
 
+                              
+					    </div>
 					</div>
 
 					<div class="box-footer clearfix">
 						
-						<button type="submit" class="btn btn-info pull-right"><i class="fa fa-save"></i> Kaydet</button>
+						<button type="submit" class="btn btn-info pull-right"><i class="fa fa-pen"></i> Güncelle</button>
 					</div>
 				</form> <br>
+
+				
                
 			</div>
-            <a href="<?=base_url("admin/Contents/home/").md5($category->categoryId)?>" class="btn btn-primary pull-left"><i class="fa fa-pencil"></i> Makaleleri Gör</a>
+          
 				  <!-- /.box -->
 		</div>	  
 		

@@ -68,17 +68,16 @@
 					<small></small>
 				</h1>
 				<ol class="breadcrumb">
-                <a href="<?php echo base_url("admin/Content/") ?>" class="btn btn-danger">
+                <a href="<?php echo base_url("admin/Content/index") ?>" class="btn btn-danger">
 							     <i class="fa fa-pencil"></i> Makaleler
 						      </a> 
-
+							  <a href="<?php echo base_url("admin/Category/index") ?>" class="btn btn-danger">
+							     <i class="fa fa-book"></i> Kategoriler
+						      </a> 
                               <a href="<?php echo base_url("admin/Category/add") ?>" class="btn btn-danger">
 							     <i class="fa fa-gear"></i> Web Site Ayarları
 						      </a> 
-                              <a href="<?php echo base_url("admin/Category/add") ?>" class="btn btn-danger">
-							     <i class="fa fa-user"></i> Admin Ayarları
-						      </a> 
-                              <a href="<?php echo base_url("admin/Category/add") ?>" class="btn btn-danger">
+                              <a href="https://samulas.com.tr/destek/" class="btn btn-danger">
 							     <i class="fa fa-home"></i> Siteyi Görüntüle
 						      </a> 
 

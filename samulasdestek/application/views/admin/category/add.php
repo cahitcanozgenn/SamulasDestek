@@ -1,7 +1,7 @@
 <section class="content">
 	<div class="row">
 		<div class="col-md-12">
-			<div class="box box-warning">
+			<div class="box box-danger">
 				<form class="form-horizontal" action="" method="POST">
 					<div class="box-header">
 						<h3 class="box-title">Kategori Ekleme Formu</h3>
@@ -14,6 +14,7 @@
 					<!-- /.box-header -->
 				
 					<div class="box-body">
+						
                     <div class="form-group">
 							<label for="title" class="col-sm-2 control-label">Kategori Adı:</label>
 							<div class="col-sm-10">
@@ -23,7 +24,7 @@
                     <div class="form-group">
 							<label for="title" class="col-sm-2 control-label">Kategori Açıklaması:</label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" name="categoryDescription" value="">
+								<textarea name="categoryDescrition" id="" cols="30" rows="3" class="form-control"></textarea>
 							</div>
 						</div>
 						<div class="form-group">
