@@ -22,8 +22,8 @@ class Login extends Admin
           exit;
         }
 
-        $this->session->set_userdata('admin', $admin);
-        redirect(base_url('admin'));
+        $this->session->set_userdata('admin/category', $admin);
+        redirect(base_url('admin/category'));
 
       }
 

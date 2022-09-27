@@ -44,10 +44,7 @@ function sira_kayit(me, kid) {
 	</div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <div class="container">
-      <div class="pull-right hidden-xs">
-        <b>Sürüm</b> 1.0
-      </div>
+    <div class="container text-center">
       <strong>Copyright &copy; 2022 <a href="https://samulas.com.tr/">SAMULAŞ A.Ş.</a> | <a href="https://samulas.com.tr/destek/">SamulaşDestek</a> | <a href="https://tr.linkedin.com/in/cahit-can-%C3%B6zgen-07ab241b6">Developed by Cahit Can ÖZGEN</a></strong>
     </div>
     <!-- /.container -->
