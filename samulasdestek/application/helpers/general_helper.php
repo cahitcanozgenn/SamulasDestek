@@ -11,4 +11,18 @@ function secure($a = false){
   return post($a);
 }
 
+function json_encode_tr($string)
+{
+    return json_encode($string, JSON_UNESCAPED_UNICODE);
+}
+
+
+function debug($a, $exit = null){
+  echo "<pre>";
+  print_r($a);
+  echo "</pre>";
+  if ($exit !== null) {
+    exit;
+  }
+}
  ?>

@@ -6,156 +6,173 @@ class Content extends Admin
     {
         parent::__construct();
         $this->load->model("Client_model");
-        $data=$this->data();
-        if (!$data['admin']) 
-        {
-           redirect(base_url('admin/login'));
-           exit;
-        }
+           $data = $this->data();
+           if (!$data['admin']) 
+           {
+             redirect(base_url('admin/login'));
+            exit;
+           }
     }
 
-    public function index()
-    {
-        $data=$this->data();
-        $items=$this->Client_model->getAll("content");
-        $viewData=array(
+
+
+public function index()
+{
+    $data = $this->data();
+    $feature_id = ($this->input->get('feature_id')) ? $this->input->get('feature') : false ;
+
+      $data['activeMenu'] = 'content';
+
+      $proje = ($this->input->get('feature')) ? $this->input->get('feature') : false ;
+   
+
+       $items=$this->Client_model->getAll('content');
+       $viewData=array(
+        "features"=>$this->Client_model->getAll(),
         "content"=>$items,
-        "category"=>$this->Client_model->getAll(),
+        "currentProject" => $proje
     );
+    $viewData['features'] = (!$proje) ?  $this->Client_model->allFeatures() : $this->Client_model->featuresOfProject($proje);
 
     $this->load->view('admin/partials/head', $data);
     $this->load->view('admin/partials/header', $data);
     $this->load->view('admin/content/home', $viewData);
     $this->load->view('admin/partials/footer', $data);
+}
 
+
+public function add()
+{
+     $data = $this->data();
+    
+  
+  if (post()) 
+  {
+       $post = secure();
+       if ($this->db->insert('content', $post)) 
+       {
+       $alert = [
+        'status' => 'success',
+        'content' => 'İçerik Ekleme İşlemi Başarılı.',
+        'redirect' => 'admin/content',
+      ];
+      $this->alert($alert);
     }
-
-
-    public function update($id = NULL)
+    else 
     {
-          $data=$this->data();
-          if($id==null)
-          {
-             redirect(base_url("admin/Content"));
-          }
- 
-            $data['content'] = $this->db->where("md5(contentId)", $id)->get("content")->row();
-             $viewData=array(
-                "category"=>$this->Client_model->getAll(),
-               
-               
-               );
-
-             if(!$data['content'])
-             {
-                redirect(base_url("admin/Content"));
-             }
-
-                  if (post()) 
-                  {
-                      $post = secure();
-                      $this->db->where("md5(contentId)", $id);
-                      if ($this->db->update('content', $post)) 
-                      {
-                             $alert = 
-                             [
-                                  'status' => 'success',
-                                  'content' => 'Makale Güncelleme İşlemi Başarılı.',
-                                  'redirect' => 'admin/content',
-                             ];
-                             $this->alert($alert);
-                    }
-                    else 
-                    {
-                       $alert =
-                       [
-                             'status' => 'error',
-                             'content' => 'Makale Güncelleme İşlemi Başarısız.',
-                             'redirect' => 'admin/content/update',
-                      ];
-                      $this->alert($alert);
-                    }
-                }
+         $alert = [
+        'status' => 'error',
+        'content' => 'İçerik Ekleme İşlemi Başarısız.',
+        'redirect' => 'admin/content/add',
+      ];
+      $this->alert($alert);
+    }
+  }
 
 
+  $this->load->view('admin/partials/head', $data);
+  $this->load->view('admin/partials/header', $data);
+  $this->load->view('admin/content/add', $data);
+  $this->load->view('admin/partials/footer', $data);
 
-
- $this->load->view('admin/partials/head',$data);
- $this->load->view('admin/partials/header',$data);
- $this->load->view('admin/content/update',$viewData);
- $this->load->view('admin/partials/footer',$data);
- 
 }
 
 
 
-public function add()
-  {
-       $data = $this->data();
-      
-       $viewData=array(
-        "category"=>$this->Client_model->getAll(),
-       );
-    if (post()) 
-    {
-         $post = secure();
-         if ($this->db->insert('content', $post)) 
-         {
-         $alert = [
-          'status' => 'success',
-          'content' => 'Makale Ekleme İşlemi Başarılı.',
-          'redirect' => 'admin/content',
-        ];
-        $this->alert($alert);
-      }
-      else 
+public function update($id = NULL)
+{
+      $data=$this->data();
+
+      $data=$this->data();
+      if($id==null)
       {
-           $alert = [
-          'status' => 'error',
-          'content' => 'Makale Ekleme İşlemi Başarısız.',
-          'redirect' => 'admin/content/add',
-        ];
-        $this->alert($alert);
+         redirect(base_url("admin/Content"));
       }
-    }
+  
+       $data['content'] = $this->db->where("md5(content_id)", $id)->get("content")->row();
+
+  
+
+      if(!$data['content'])
+      {
+          redirect(base_url("admin/Content"));
+      }
 
 
-    $this->load->view('admin/partials/head', $data);
-    $this->load->view('admin/partials/header', $data);
-    $this->load->view('admin/content/add', $viewData);
-    $this->load->view('admin/partials/footer', $data);
-
-  }
-
-  public function idContent($id)
+  if (post()) 
   {
-    if($id==null)
-    {
-       redirect(base_url("admin/Content"));
-    }
-
-     $data['content'] = $this->db->where("md5(contentId)", $id)->get("content")->row();
-
-
-
-    if(!$data['content'])
-    {
-
-      $alert = [
-          'status' => 'error',
-          'content' => 'Makale Bulunamadı.',
-          'redirect' => 'admin/category/',
+        $post = secure();
+        $this->db->where("md5(content_id)", $id);
+        if ($this->db->update('content', $post)) 
+        {
+           $alert = [
+          'status' => 'success',
+          'content' => 'İçerik Güncelleme İşlemi Başarılı.',
+          'redirect' => 'admin/content',
       ];
       $this->alert($alert);
     }
+    else 
+    {
+      $alert = [
+        'status' => 'error',
+        'content' => 'İçerik Güncelleme İşlemi Başarısız.',
+        'redirect' => 'admin/content/update',
+      ];
+      $this->alert($alert);
+    }
+  }
+ 
+
+
+
+  $this->load->view('admin/partials/head',$data);
+  $this->load->view('admin/partials/header',$data);
+  $this->load->view('admin/content/update',$data);
+  $this->load->view('admin/partials/footer',$data);
+  
+}
+
+public function detail($id = NULL)
+{
+      $data=$this->data();
+
+      $data=$this->data();
+      if($id==null)
+      {
+         redirect(base_url("admin/Content"));
+      }
+  
+       $data['content'] = $this->db->where("md5(content_id)", $id)->get("content")->row();
+
   
 
-  $this->load->view('admin/partials/head', $data);
-  $this->load->view('admin/partials/header', $data);
-  $this->load->view('admin/content/idContent', $data);
-  $this->load->view('admin/partials/footer', $data);
+      if(!$data['content'])
+      {
+          redirect(base_url("admin/Content"));
+      }
 
-  }
+
+ 
+ 
+
+
+
+  $this->load->view('admin/partials/head',$data);
+  $this->load->view('admin/partials/header',$data);
+  $this->load->view('admin/content/detail',$data);
+  $this->load->view('admin/partials/footer',$data);
+  
+}
+
+
+
+
+
+
+
+
+
 
 
 

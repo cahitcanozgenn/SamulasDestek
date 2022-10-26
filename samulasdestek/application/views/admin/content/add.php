@@ -1,70 +1,56 @@
-<section class="content">
-	<div class="row">
-		<div class="col-md-12">
-			<div class="box box-danger">
-				<form class="form-horizontal" action="" method="POST">
-					<div class="box-header">
-						<h3 class="box-title">Makale Güncelleme Formu</h3>
-						<div class="pull-right box-tools">
-							<a href="/admin" class="btn btn-success" style="margin-right: 10px;">
-								<i class="fa fa-angle-left"></i> Geri
-							</a>
-						</div>
-					</div>
-					<!-- /.box-header -->
-				
-					<div class="box-body">
-                    <div class="form-group">
-							<label for="title" class="col-sm-2 control-label">Kategori Adı:</label>
-                            <div class="col-sm-10">
-                            <select name="contentCategory" id="" class="form-control">
-                           <?php  foreach($category as $category) { ?>  
-                <option value="<?php echo $category->categoryId ?>"><?php echo $category->categoryName ?></option>
-                    <?php } ?>
+<div class="dash-app">
+  <div class="container">
+    <div class="row">
+    <table class="w-100 table table-bordered">
+        <tr>
+          <td><b><img src="https://www.letqr.com/uploads/profile/user_profile.png" alt=""  height="50"></b></td>
+        </tr>
+        <form action="" method="post">
+        <tr>
+          <td><b>Özellik:</b></td>
+          <td> <input type="text" class="form-control" name="feature_id" value="" required></td>
+        </tr>
+        <tr>
+          <td><b>Başlık:</b></td>
+          <td><input type="text" class="form-control" name="content_title" value="" required></td>
+        </tr>
+        <tr>
+          <td><b>Açıklama:</b></td>
+          <td><input type="text" class="form-control" name="content_description" value="" required></td>
+        </tr>
+        <tr>
+          <td><b>Alt Açıklama:</b></td>
+          <td><input type="text" class="form-control" name="content_subdescription" value="" required></td>
+        </tr>
+        <tr>
+          <td><b>Kod:</b></td>
+          <td><input type="text" class="form-control" name="content_code" value="" required></td>
+        </tr>
+        <tr>
+          <td><b>Sıra:</b></td>
+          <td><input type="text" class="form-control" name="content_seq" value="" required></td>
+        </tr>
+        <tr>
+          <td><b>Durum:</b></td>
+          <td><input type="text" class="form-control" name="content_status" value="" required></td>
+        </tr>
+        <tr>
+          <td><b>Tarih:</b></td>
+          <td><input type="text" class="form-control" name="content_date" value="" required></td>
+        </tr>
+<tr>
+    <td></td>
+    <td align="right">
+    <button class="btn btn-primary">YENİ İÇERİK EKLE</button>
+    </td>
+
+</tr>
       
-               </select>
-                            </div>
-						</div>
-                        <div class="form-group">
-							<label for="title" class="col-sm-2 control-label">Makale Başlığı: </label>
-							<div class="col-sm-10">
-								<input type="text" class="form-control" name="contentTitle" value="">
-							</div>
-						</div>
-                    <div class="form-group">
-							<label for="title" class="col-sm-2 control-label">Makale Açıklaması:</label>
-							<div class="col-sm-10">
-								<textarea class="form-control" name="contentDescription" id="" cols="30" rows="5"></textarea>
-							</div>
-						</div>
-						
-                        <div class="form-group">
-							<label for="title" class="col-sm-2 control-label">Makale İçeriği: </label>
-							<div class="col-sm-10">
-								<textarea class="form-control" name="contentText" id="" cols="30" rows="10"></textarea>
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="constant_id" class="col-sm-2 control-label">Makale Durumu: </label>
-							<div class="col-sm-10">
-								<select class="form-control" name="contentStatus">
-									<option value="0">PASİF</option>
-									<option value="1">AKTİF</option>
-								</select>
-							</div>
-						</div>
+        </form>
 
-					</div>
 
-					<div class="box-footer clearfix">
-						
-						<button type="submit" class="btn btn-info pull-right"><i class="fa fa-save"></i> EKLE</button>
-					</div>
-				</form> <br>
-               
-			</div>
-          
-				  <!-- /.box -->
-		</div>	  
-		
-	</div>
+      </table>
+
+    </div>
+  </div>
+</div>

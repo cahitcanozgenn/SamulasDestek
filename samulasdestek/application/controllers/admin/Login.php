@@ -11,10 +11,10 @@ class Login extends Admin
 
       if (post()) {
         $post = secure();
-        $admin = $this->cm->login($post['adminEmailAddress'], $post['adminPassword']);
+        $admin = $this->cm->login($post['adminUserName'], $post['adminPassword']);
         if (!$admin) {
           $alert = [
-            'status' => 'OPPPSS!!',
+            'status' => 'error',
             'content' => 'Böyle bir kullanıcı yok',
             'redirect' => 'admin/login',
           ];
@@ -22,8 +22,9 @@ class Login extends Admin
           exit;
         }
 
-        $this->session->set_userdata('admin/category', $admin);
-        redirect(base_url('admin/category'));
+        $this->session->set_userdata('admin', $admin);
+        $this->session->set_userdata('user', $admin);
+        redirect(base_url('admin'));
 
       }
 
